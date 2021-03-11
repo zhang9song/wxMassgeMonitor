@@ -11,7 +11,7 @@ class Monitor():
     def __init__(self, wnd_title):
         '''wnd_title is wechat window that you want to record.
         Please drag it from wechat main window to independent window'''
-        hwnid = findwindows.find_window(class_name='ChatWnd', title='参谋二部')
+        hwnid = findwindows.find_window(class_name='ChatWnd', title=wnd_title)
         app = application.Application(backend="uia").connect(handle=hwnid)
         self.win_main_Dialog = self.app.window(class_name='ChatWnd')
 
